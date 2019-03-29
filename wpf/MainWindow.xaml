@@ -1,0 +1,186 @@
+﻿<Window
+    x:Class="wpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="МОСФЛЕШ. Программа проверки качества чипов."
+    Height="450"
+    Width="540"
+    MinHeight="450"
+    MinWidth="540"
+    Icon="/myicon.ico"
+    Style="{StaticResource MyStyle}"
+    >
+    <Grid Margin="0,0,0,74.8">
+        <!--<StatusBar
+            DockPanel.Dock="Bottom"
+            Height="24">
+            <TextBlock Margin="3,0,0,0">Ready</TextBlock>
+            <StatusBarItem HorizontalAlignment="Right">
+                <ResizeGrip Opacity="0.75"/>
+            </StatusBarItem>
+        </StatusBar>-->
+        <Label
+            Content="Выберите диск для проверки: "
+            FontSize="13"
+            BorderThickness="0" 
+            Padding="2"
+            Background="Transparent"
+            ScrollViewer.CanContentScroll="True" 
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="40,10,0,294.8" HorizontalAlignment="Left" Foreground="White"
+            />
+        <Button x:Name="ButDrv" Content="Нажмите для выбора" Width="443" Margin="40,37,40,0" Height="27" VerticalAlignment="Top" Click="Button_Click_1" Foreground="#FF5D5D5D">
+        <Button.Template>
+            <ControlTemplate  TargetType="Button">
+                <Grid>
+                        
+                        <Rectangle x:Name="RectDrv"  Fill="White">
+
+                        </Rectangle>
+                    <Label x:Name="DrvLabel" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                               VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}"></Label>
+                </Grid>
+                    
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="RectDrv">
+                                        <ColorAnimation To="#A0A09F" SpeedRatio="7"></ColorAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="RectDrv">
+                                        <ColorAnimation To="#FFFFFF" SpeedRatio="7"></ColorAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+                
+                    
+            </Button.Template>
+
+        </Button>
+        <Button x:Name="butRun" Content="Запустить" Height="50" VerticalAlignment="Top" Width="180" Margin="168,83,176.8,0" FontSize="18" Click="butRun_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="Button">
+                    <Grid>
+
+                        <Rectangle x:Name="Rect" RadiusX="15" RadiusY="15" Fill="White"></Rectangle>
+                        <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+
+                            
+            </Label>
+
+                    </Grid>
+                    
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="Rect">
+                                        <ColorAnimation To="#BADA55" SpeedRatio="7"></ColorAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="Rect">
+                                        <ColorAnimation To="#FFFFFF" SpeedRatio="7"></ColorAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Button.Template>
+            
+                
+
+            
+        </Button>
+        <Label
+        	Content="Информация"
+        	FontSize="13"
+        	BorderThickness="0" 
+        	Padding="2"
+        	Background="Transparent"
+        	ScrollViewer.CanContentScroll="True" 
+        	ScrollViewer.VerticalScrollBarVisibility="Auto"
+        	ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="40,136,0,168.8" HorizontalAlignment="Left" Foreground="White"
+            />
+        <Grid Background="White" Margin="40,163,40.2,-24.2">
+            <Label Content="Запись:" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Чтение:" HorizontalAlignment="Left" Margin="240,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Объём:" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Скорость:" HorizontalAlignment="Left" Margin="30,84,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Время:" HorizontalAlignment="Left" Margin="30,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Объём:" HorizontalAlignment="Left" Margin="240,47,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Скорость:" HorizontalAlignment="Left" Margin="240,84,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Время:" HorizontalAlignment="Left" Margin="240,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label x:Name="errlab" Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,158,0,0"  />
+            <Label x:Name="wrtime" Content="" HorizontalAlignment="Left" Margin="94,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label x:Name="wrspeed" Content="" HorizontalAlignment="Left" Margin="117,84,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label x:Name="wrsum" Content="" HorizontalAlignment="Left" Margin="99,47,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label x:Name="rdtime" Content="" HorizontalAlignment="Left" Margin="307,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label x:Name="rdspeed" Content="" HorizontalAlignment="Left" Margin="330,84,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label x:Name="rdsum" Content="" HorizontalAlignment="Left" Margin="312,47,0,0" VerticalAlignment="Top" FontSize="16"/>
+        </Grid>
+        <Label
+        	Content="www.mosflash.ru"
+        	FontSize="13"
+        	BorderThickness="0" 
+        	Padding="2"
+        	Background="Transparent"
+        	ScrollViewer.CanContentScroll="True" 
+        	ScrollViewer.VerticalScrollBarVisibility="Auto"
+        	ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,356,39.8,-49.2" HorizontalAlignment="Right" Foreground="White" VerticalAlignment="Bottom" MouseLeftButtonDown="Label_MouseLeftButtonDown_1" Cursor="Hand"
+            />
+        <Button x:Name="butStop" Content="Остановить" Height="50" VerticalAlignment="Top" Width="180" Margin="168,83,176.8,0" FontSize="18" Click="butStop_Click" Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+
+                        <Rectangle x:Name="Rect" RadiusX="15" RadiusY="15" Fill="White"/>
+                        <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+        					VerticalAlignment="Center"/>
+
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="Rect">
+                                    <ColorAnimation To="#F06478" SpeedRatio="7"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="Rect">
+                                    <ColorAnimation To="#FFFFFF" SpeedRatio="7"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Button.Template>
+
+
+
+
+        </Button>
+        <ProgressBar x:Name="progress" HorizontalAlignment="Left" Height="27" Margin="42,37,0,0" VerticalAlignment="Top" Width="443" Background="White" BorderBrush="White" Visibility="Hidden"/>
+    </Grid>
+</Window>

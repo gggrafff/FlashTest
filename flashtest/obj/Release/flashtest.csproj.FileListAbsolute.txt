@@ -1,0 +1,9 @@
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\bin\Release\flashtest.exe.config
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\bin\Release\flashtest.exe
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\bin\Release\flashtest.pdb
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\obj\Release\flashtest.csprojResolveAssemblyReference.cache
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\obj\Release\flashtest.Form1.resources
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\obj\Release\flashtest.Properties.Resources.resources
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\obj\Release\flashtest.csproj.GenerateResource.Cache
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\obj\Release\flashtest.exe
+C:\Users\Анатолий\Documents\Visual Studio 2012\Projects\flashtest\flashtest\obj\Release\flashtest.pdb
