@@ -28,7 +28,7 @@ namespace wpf
         public DriveInfo selected;
         SelectDrive SW;
         ReadyWindow RW;
-        report Rep;
+        ReportWindow Rep;
         int wrfulltime;
         int rdfulltime;
         long writesummb;
@@ -74,10 +74,10 @@ namespace wpf
 
         private void Label_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.mosflash.ru");
+            System.Diagnostics.Process.Start("http://logoprime.ru");
         }
 
-        private void butRun_Click(object sender, RoutedEventArgs e)
+        private void ButtonRun_Click(object sender, RoutedEventArgs e)
         {
             if (selected != null)
             {
@@ -94,7 +94,6 @@ namespace wpf
                 {
                     Dispatcher.Invoke(new Action(() =>
                     {
-                        //errors.Add(ex.Message);
                         errors.Add("Флеш-носитель повреждён или не читается. ");
                         errlab.Content = "Обнаружено " + errors.Count + " ошибок.";
                         errlab.Cursor = Cursors.Hand;
@@ -146,7 +145,7 @@ namespace wpf
         }
         void Process() {
             butStop.Visibility = Visibility.Visible;
-            butRun.Visibility = Visibility.Hidden;
+            ButtonRun.Visibility = Visibility.Hidden;
             ButDrv.Visibility = Visibility.Hidden;
             progress.Visibility = Visibility.Visible;
             progress.Maximum = selected.AvailableFreeSpace/1024/1024;
@@ -161,7 +160,7 @@ namespace wpf
         void BW_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             butStop.Visibility = Visibility.Hidden;
-            butRun.Visibility = Visibility.Visible;
+            ButtonRun.Visibility = Visibility.Visible;
         }
 
         
@@ -525,7 +524,7 @@ namespace wpf
         }
         void errlab_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Rep = new report();
+            Rep = new ReportWindow();
             Rep.Loaded += Rep_Loaded;
             Rep.Closed += Rep_Closed;
             Rep.Show();
@@ -579,7 +578,7 @@ namespace wpf
             BW.CancelAsync();
             DirectoryInfo dir = new DirectoryInfo(selected.Name);
             butStop.Visibility = Visibility.Hidden;
-            butRun.Visibility = Visibility.Visible;
+            ButtonRun.Visibility = Visibility.Visible;
             ButDrv.Visibility = Visibility.Visible;
             progress.Visibility = Visibility.Hidden;
         }

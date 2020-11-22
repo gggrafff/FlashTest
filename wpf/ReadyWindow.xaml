@@ -1,24 +1,43 @@
 ﻿<Window x:Class="wpf.ReadyWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="МОСФЛЕШ. Продолжить?"
+        Title="logoPRIME. Продолжить?"
     Height="176.8"
     Width="428"
     MinHeight="160"
     MinWidth="400"
-    Icon="/myicon.ico"
-    Style="{StaticResource StyleSelect}">
+    Icon="Icons/logoprime.ico"
+    Style="{StaticResource LogoprimeSelectStyle}">
     <Grid Margin="0,0,0,0.6">
-        <TextBlock x:Name="warning" HorizontalAlignment="Left" Margin="23,10,0,-43.4" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="47" Width="380"/>
-        <CheckBox x:Name="reserv" Content="Создать резервную копию данных" HorizontalAlignment="Left" Height="22" Margin="23,62,0,-70.4" VerticalAlignment="Top" Width="362" Foreground="White" Background="White" BorderBrush="White" Checked="reserv_Checked"/>
+        <TextBlock 
+            x:Name="warning" 
+            HorizontalAlignment="Left" 
+            Margin="23,10,0,-43.4"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Foreground="#ffffff" 
+            FontSize="14" 
+            Height="47" 
+            Width="380"/>
+        <CheckBox x:Name="reserv" 
+                  Content="Создать резервную копию данных" 
+                  HorizontalAlignment="Left" 
+                  Height="22" 
+                  Margin="23,62,0,-70.4" 
+                  VerticalAlignment="Top" 
+                  Width="362" 
+                  Foreground="#dfb200" 
+                  Background="#dfb200" 
+                  BorderBrush="#dfb200" 
+                  Checked="reserv_Checked"/>
         <Button x:Name="butYes" Content="Да" Height="33" VerticalAlignment="Top" Margin="23,84,238.8,-103.4" FontSize="18" Click="butYes_Click">
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
 
-                        <Rectangle x:Name="Rect" RadiusX="15" RadiusY="15" Fill="White"/>
+                        <Rectangle x:Name="Rect" RadiusX="15" RadiusY="15" Fill="#dfb200"/>
                         <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center"
-        					VerticalAlignment="Center"/>
+        					VerticalAlignment="Center" Foreground="#1e1e1e"/>
 
                     </Grid>
 
@@ -33,7 +52,7 @@
                         <EventTrigger RoutedEvent="UIElement.MouseLeave">
                             <BeginStoryboard>
                                 <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="Rect">
-                                    <ColorAnimation To="#FFFFFF" SpeedRatio="7"/>
+                                    <ColorAnimation To="#dfb200" SpeedRatio="7"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -51,9 +70,9 @@
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
 
-                        <Rectangle x:Name="Rect" RadiusX="15" RadiusY="15" Fill="White"/>
+                        <Rectangle x:Name="Rect" RadiusX="15" RadiusY="15" Fill="#dfb200"/>
                         <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center"
-        					VerticalAlignment="Center"/>
+        					VerticalAlignment="Center" Foreground="#1e1e1e"/>
 
                     </Grid>
 
@@ -68,7 +87,7 @@
                         <EventTrigger RoutedEvent="UIElement.MouseLeave">
                             <BeginStoryboard>
                                 <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="Rect">
-                                    <ColorAnimation To="#FFFFFF" SpeedRatio="7"/>
+                                    <ColorAnimation To="#dfb200" SpeedRatio="7"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>

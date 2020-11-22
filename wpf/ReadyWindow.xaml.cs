@@ -24,7 +24,7 @@ namespace wpf
     public partial class ReadyWindow : Window
     {
         DriveInfo selected;
-        Folders fd;
+        FoldersWindow fd;
         bool ready = false;
         bool delete = false;
         public bool res = false;
@@ -195,7 +195,7 @@ namespace wpf
 
         private void reserv_Checked(object sender, RoutedEventArgs e)
         {
-            fd = new Folders();
+            fd = new FoldersWindow();
             fd.Closed += fd_Closed;
             fd.Show();
             this.IsEnabled = false;

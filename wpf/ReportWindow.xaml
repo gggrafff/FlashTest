@@ -1,0 +1,59 @@
+﻿<Window x:Class="wpf.ReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="logoPRIME. Отчёт о проверке."
+    Height="450"
+    Width="540"
+    MinHeight="450"
+    MinWidth="540"
+    Icon="Icons/logoprime.ico"
+    Style="{StaticResource LogoprimeMainStyle}">
+    <Grid>
+        <TextBlock x:Name="repmb" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="Transparent"  Foreground="#dfb200" FontSize="18" Width="505" Height="67"/>
+        <Button x:Name="butClose" Content="Закрыть" Height="33" VerticalAlignment="Top" Margin="186,359,187.8,0" FontSize="18" Click="butClose_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+
+                        <Rectangle x:Name="Rect" RadiusX="15" RadiusY="15" Fill="#dfb200"/>
+                        <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+        					VerticalAlignment="Center"/>
+
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="Rect">
+                                    <ColorAnimation To="#BADA55" SpeedRatio="7"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetProperty="Fill.Color" Storyboard.TargetName="Rect">
+                                    <ColorAnimation To="#dfb200" SpeedRatio="7"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBox 
+            x:Name="errorsreport" 
+            HorizontalAlignment="Left" 
+            Height="272" 
+            Margin="10,82,0,0" 
+            TextWrapping="Wrap" 
+            Text="" 
+            VerticalAlignment="Top" 
+            Width="505" 
+            IsReadOnly="True" 
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            Background="#dfb200"
+            Foreground="#1e1e1e"/>
+
+    </Grid>
+</Window>

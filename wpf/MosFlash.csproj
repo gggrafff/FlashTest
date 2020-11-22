@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MosFlash</RootNamespace>
-    <AssemblyName>MosFlash</AssemblyName>
+    <AssemblyName>LogoPrime</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,7 +55,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>myicon.ico</ApplicationIcon>
+    <ApplicationIcon>Icons\logoprime.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -79,21 +79,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Folders.xaml.cs">
-      <DependentUpon>Folders.xaml</DependentUpon>
+    <Compile Include="FoldersWindow.xaml.cs">
+      <DependentUpon>FoldersWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ReadyWindow.xaml.cs">
       <DependentUpon>ReadyWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="report.xaml.cs">
-      <DependentUpon>report.xaml</DependentUpon>
+    <Compile Include="ReportWindow.xaml.cs">
+      <DependentUpon>ReportWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SelectDrive.xaml.cs">
       <DependentUpon>SelectDrive.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Styles\CustomizedWindow\MyStyle.cs" />
-    <Compile Include="Styles\CustomizedWindow\StyleSelect.cs" />
-    <Page Include="Folders.xaml">
+    <Compile Include="Styles\Logoprime\LogoprimeMainStyle.cs" />
+    <Compile Include="Styles\Logoprime\LogoprimeSelectStyle.cs" />
+    <Compile Include="Styles\Mosflash\MosflashMainStyle.cs" />
+    <Compile Include="Styles\Mosflash\MosflashSelectStyle.cs" />
+    <Page Include="FoldersWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,7 +115,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="report.xaml">
+    <Page Include="ReportWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,11 +123,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\CustomizedWindow\MyStyle.xaml">
+    <Page Include="Styles\Logoprime\LogoprimeMainStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Logoprime\LogoprimeSelectStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Mosflash\MosflashMainStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\CustomizedWindow\StyleSelect.xaml">
+    <Page Include="Styles\Mosflash\MosflashSelectStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,9 +175,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="myicon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
@@ -178,6 +185,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\logoprime.ico" />
+    <Resource Include="Icons\mosflash.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

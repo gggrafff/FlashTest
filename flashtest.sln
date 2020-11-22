@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flashtest", "flashtest\flashtest.csproj", "{3FA316BE-7940-45D9-A6F5-8EA8EF0F45C3}"
-EndProject
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosFlash", "wpf\MosFlash.csproj", "{05C33120-550C-4C96-8D09-0F9EC2294FDE}"
 EndProject
 Global
@@ -11,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3FA316BE-7940-45D9-A6F5-8EA8EF0F45C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3FA316BE-7940-45D9-A6F5-8EA8EF0F45C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3FA316BE-7940-45D9-A6F5-8EA8EF0F45C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3FA316BE-7940-45D9-A6F5-8EA8EF0F45C3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05C33120-550C-4C96-8D09-0F9EC2294FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05C33120-550C-4C96-8D09-0F9EC2294FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05C33120-550C-4C96-8D09-0F9EC2294FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -22,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EDD4D87-22CD-4283-A867-6C7F8AE61F6B}
 	EndGlobalSection
 EndGlobal

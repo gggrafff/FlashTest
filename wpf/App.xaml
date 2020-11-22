@@ -5,8 +5,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles/CustomizedWindow/MyStyle.xaml" />
-                <ResourceDictionary Source="Styles/CustomizedWindow/StyleSelect.xaml" />
+                <ResourceDictionary Source="Styles/Mosflash/MosflashMainStyle.xaml" />
+                <ResourceDictionary Source="Styles/Mosflash/MosflashSelectStyle.xaml" />
+                <ResourceDictionary Source="Styles/Logoprime/LogoprimeMainStyle.xaml" />
+                <ResourceDictionary Source="Styles/Logoprime/LogoprimeSelectStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
